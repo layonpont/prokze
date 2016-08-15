@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  care_type: MyString
+  location: MyString
+  start_time: MyString
+  duration: MyString
+  patient_gender: MyString
+  additional_info: MyText
+  smoker: false
+  dogs: false
+  cats: false
+  iv_therapy: false
+  trach_care: false
+  nurse_title: MyString
+
+two:
+  care_type: MyString
+  location: MyString
+  start_time: MyString
+  duration: MyString
+  patient_gender: MyString
+  additional_info: MyText
+  smoker: false
+  dogs: false
+  cats: false
+  iv_therapy: false
+  trach_care: false
+  nurse_title: MyString

@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 center">
+    <h2 style="color: #000000; font-family: 'Calibri Light'; font-size: 37px ">Log in to your account</h2>
+    <p style=" font-size:17px; margin-bottom: 25px; font-family: 'Calibri Light'">
+      <!-- react-text: 56 -->Don’t have an account? <!-- /react-text -->
+      <br class="visible-xs-block" >
+      <a href="" style="text-decoration: underline; margin-bottom: 50px">Sign up for FREE!</a>
+    </p>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= render 'shared/devisemessage' %>
+
+        <div class="form-group">
+          <label for="email" style="font-size: 25px; font-family: 'Calibri Light'; color: #6d6d6d; margin-bottom: 13px" >Email address</label>
+          <%= f.email_field :email, :class => 'form-control', :placeholder => 'Email'%>
+        </div>
+
+        <div  class="form-group">
+          <label for="email" style="font-size: 25px; font-family: 'Calibri Light';  color: #6d6d6d; margin-bottom: 13px">Password</label>
+          <%= f.password_field :password, :class => 'form-control',  autocomplete: "off" %>
+        </div>
+
+
+        <div>
+          <% if devise_mapping.rememberable? %>
+              <%= f.check_box :remember_me%>
+          <% end %>
+          <div class="remember-me">
+            Remember Me <span class="forgot-password"><%= link_to "Forgot Password?", new_admin_password_path %></span>
+          </div>
+        </div>
+        <div class="actions" >
+
+          <div style="margin-top: 30px"> <%= f.submit "LOG IN", :class => "btn btn-primary " %></div>
+        </div>
+    <% end %>
+  </div>
+</div>

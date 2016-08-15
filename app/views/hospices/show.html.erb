@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hospice.name %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @hospice.username %>
+</p>
+
+<p>
+  <strong>Passcode:</strong>
+  <%= @hospice.passcode %>
+</p>
+
+<%= link_to 'Edit', edit_hospice_path(@hospice) %> |
+<%= link_to 'Back', hospices_path %>

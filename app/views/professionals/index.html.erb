@@ -1,0 +1,27 @@
+<h1 style="display: inline; margin-right: 20px"> Professionals</h1><%= link_to 'Add A Professional', new_professional_path %>
+<div class="center">
+<% @professionals.each do |professional| %>
+<div class="row">
+  <div class="col-md-11">
+    <div class="panel panel-default">
+      <div class="panel-heading center-block">Name:<%= professional.name %></div>
+      <div class="panel-body">
+        Title:<%= professional.title %><br>
+        Email Address:<%= professional.email %><br>
+        Phone Number:<%= professional.phone %><br>
+
+          <%= link_to 'Edit', edit_professional_path(professional) %>
+         <%= link_to 'Remove', professional, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+
+  </div>
+
+    </div>
+
+
+    <% end %>
+  </div>
+
+<br>
+

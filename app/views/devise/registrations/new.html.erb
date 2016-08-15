@@ -1,0 +1,30 @@
+      <div class="row">
+            <div class="col-md-6 col-md-offset-3 center">
+                  <h2 style="color: #000000; font-family: 'Calibri Light'; font-size: 37px ">Sign up a new admin</h2>
+
+                  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                        <%= render 'shared/devisemessage' %>
+
+                        <div class="form-group">
+                          <%= f.email_field :email, :class => 'form-control', :placeholder => 'Email'%>
+                        </div>
+
+                    <div class="form-group">
+                          <label for="password" style="font-size: 25px; font-family: 'Calibri Light'; color: #6d6d6d; margin-bottom: 13px" >Password</label>
+                          <% if @minimum_password_length %>
+                          <em style="font-size: 15px; font-family: 'Calibri Light'; color: #202020; margin-bottom: 13px">(<%= @minimum_password_length %> characters minimum)</em>
+                          <% end %><br />
+                          <%= f.password_field :password, :class => 'form-control',  autocomplete: "off" %>
+                    </div>
+
+                    <div class="field">
+                      <label for="password" style="font-size: 25px; font-family: 'Calibri Light'; color: #6d6d6d; margin-bottom: 13px" >Password Confirmation</label>
+                      <%= f.password_field :password_confirmation, :class => 'form-control',  autocomplete: "off" %>
+                    </div>
+
+                      <div class="actions" style="margin-top: 30px">
+                        <%= f.submit "Sign up", :class => "btn btn-primary " %>
+                      </div>
+                    <% end %>
+            </div>
+      </div>

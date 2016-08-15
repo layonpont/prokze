@@ -1,0 +1,18 @@
+            <div class="row">
+              <div class="col-md-5 col-md-offset-3 center">
+                  <h2 style="color: #000000; font-family: 'Calibri Light'; font-size: 37px">Forgot password</h2>
+                   <p style="text-align: left; font-family:'Calibri Light'; font-size: 15px; color: #6b6b6b;">Please enter the email address you used to create your Prokze account. An email will be sent with a link to reset your password. </p>
+
+                  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+                  <%= render 'shared/devisemessage' %>
+
+                  <div class="form-group " style="margin-bottom: 25px; margin-top: 30px">
+                    <label for="email" style="font-size: 25px; font-family: 'Calibri Light'; color: #6d6d6d; margin-bottom: 13px" >Email Address</label>
+                    <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Enter your account email address" %>
+                  </div>
+
+                  <%= f.submit "SEND RESET LINK", :class => "btn btn-primary" %>
+                  <% end %>
+
+              </div>
+            </div>

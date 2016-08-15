@@ -1,0 +1,2 @@
+json.extract! request, :id, :care_type, :location, :start_time, :duration, :patient_gender, :additional_info, :smoker, :dogs, :cats, :iv_therapy, :trach_care, :nurse_title, :created_at, :updated_at
+json.url request_url(request, format: :json)

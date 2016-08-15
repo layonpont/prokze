@@ -1,0 +1,134 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Patient Case Request Form
+  </div>
+  <div class="panel-body">
+    <div class="container">
+
+      <%= form_for (@request) do |f| %>
+
+          <div class="row">
+            <div class="form-group">
+              <label> Type of care needed ?</label>
+              <%= f.select :care_type, [["Continous Care","Continous Care"], ["Respite Care","Respite Care"]], {prompt: "Select..."}, {class: "form-control"} %>
+            </div>
+          </div>
+
+
+
+
+          <div class="row">
+            <div class="form-group">
+              <label>Where is care needed ?</label>
+              <%= f.text_field :location, placeholder: "Please enter patient's zipcode", class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="form-group">
+                <label class="control-label">Is immediate care needed?</label>
+                <select class="form-control edit">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+            </div>
+
+
+          <div class="row">
+            <div class="form-group">
+              <label>Choose your start date.</label>
+              <%= f.text_field :start_day, placeholder: "MM/DD/YY", class: "form-control" %>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="form-group">
+              <label>Choose your start time.</label>
+              <%= f.text_field :start_time, placeholder: "08:00 AM", class: "request_start_time form-control" %>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="form-group">
+              <label>Duration for care time?</label>
+              <%= f.select :duration, [["4 hrs"," 4 hrs"], ["8 hrs","8 hrs"], ["12 hrs","12 hrs"], ["16 hrs","16 hrs"]], {prompt: "Select Time Shift.."}, {class: "form-control"} %>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="form-group">
+              <label>Nurse Needed</label>
+              <%= f.select :nurse_title, [["RN","RN"],["LPN","LPN"],["RN or LPN"," RN or LPN"], ["CNA","CNA"], ["Doesn't Matter","Doesn't Matter"]],{prompt: "Select Nurse Title..."},{ class: "form-control"} %>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="form-group">
+                <label>Patient Gender</label>
+                <%= f.select :patient_gender, [["Male","Male"], ["Female","Female"]],{prompt: "Select..."},{ class: "form-control"} %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group">
+                <label>Additional Information about the Patient(optional)</label>
+                <%= f.text_area :additional_info, rows: 5, placeholder: "Describe your ", class: "form-control" %>
+              </div>
+            </div>
+
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <%= f.check_box :dogs %> Dogs
+              </div>
+              <div class="form-group">
+                <%= f.check_box :cats %> Cats
+              </div>
+              <div class="form-group">
+                <%= f.check_box :smoker %> Smoker
+              </div>
+
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <%= f.check_box :trach_care%>Needs Trach Care
+              </div>
+              <div class="form-group">
+                <%= f.check_box :iv_therapy %> Needs IV Therapy
+              </div>
+            </div>
+
+          </div>
+          <div class="actions">
+            <%= f.submit "Save", class: "btn btn-primary" %>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+      <% end %>
+
+
+      <script>
+        $(function() {
+
+          $('#request_start_day').datepicker({
+            dateFormat: 'mm-dd-yy'
+          });
+        });
+      </script>
+
+      <script>
+
+        $(function() {
+        // initialize input widgets first
+        $('#request_start_time').timepicker({
+          timeFormat: 'g:ia'
+        });
+        });
+      </script>

@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Care type:</strong>
+  <%= @request.care_type %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @request.location %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @request.start_time %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @request.duration %>
+</p>
+
+<p>
+  <strong>Patient gender:</strong>
+  <%= @request.patient_gender %>
+</p>
+
+<p>
+  <strong>Additional info:</strong>
+  <%= @request.additional_info %>
+</p>
+
+<p>
+  <strong>Smoker:</strong>
+  <%= @request.smoker %>
+</p>
+
+<p>
+  <strong>Dogs:</strong>
+  <%= @request.dogs %>
+</p>
+
+<p>
+  <strong>Cats:</strong>
+  <%= @request.cats %>
+</p>
+
+<p>
+  <strong>Iv therapy:</strong>
+  <%= @request.iv_therapy %>
+</p>
+
+<p>
+  <strong>Trach care:</strong>
+  <%= @request.trach_care %>
+</p>
+
+<p>
+  <strong>Nurse title:</strong>
+  <%= @request.nurse_title %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>

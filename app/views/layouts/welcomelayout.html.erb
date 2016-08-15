@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prokze</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <script src="https://use.fontawesome.com/f205e83315.js"></script>
+  <%= csrf_meta_tags %>
+  <script>
+
+    $('#iconified').on('keyup', function() {
+      var input = $(this);
+      if(input.val().length === 0) {
+        input.addClass('empty');
+      } else {
+        input.removeClass('empty');
+      }
+    });
+
+    </script>
+</head>
+
+<body class="home">
+    <%= render 'shared/message' %>
+    <%= render 'shared/homenavbar' %>
+    <%= yield %>
+</body>
+</html>

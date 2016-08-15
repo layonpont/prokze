@@ -1,0 +1,332 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "toastr";
+@import "jquery.ui.datepicker";
+@import "jquery.timepicker.css";
+
+
+div.ui-datepicker {
+  font-size: 62px;
+}
+body {
+  color: #565a5c;
+  background-color: #F8F8F8;
+}
+
+.container {
+  width: 80%;
+}
+
+.navbar-default {
+  background-color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand {
+  color: #FF5A5F;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.btn-primary.btn {
+  border: 1px solid #ff5a5f;
+  border-radius: 2px;
+  font-weight: bold;
+  background-color: #ff5a5f;
+  color: #fff;
+  padding: 10px 25px 10px 25px;
+}
+
+.btn-primary.btn:hover, .btn-primary.btn:focus {
+  border-color: #ff7e82;
+  border-bottom-color: #fa0008;
+  background-color: #ff7e82;
+  outline:none;
+}
+
+.btn-primary.btn:active {
+  border-color: #e00007;
+  background-color: #e00007;
+  outline:none;
+}
+
+.btn-default.btn {
+  width: 100%;
+  border-radius: 2px;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.panel-default .panel-heading {
+  color: #565a5c;
+  background-color: #edefed;
+  font-size: 18px;
+  font-weight: 400
+}
+
+.row-space-1 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.row-space-2 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.row-space-3 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.description {
+  color: #575757;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+}
+ .home nav.navbar-default .navbar-nav > li > a {
+  margin-bottom: -30px;
+  margin-right: 12px;
+  font-weight: 500;
+  font-family: 'Ubuntu Bold';
+  font-size:17px;
+  border-color: #717171;
+  font-style: inherit;
+  color: white;
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: initial;
+  webkit-transition: background 0.3s ease-in-out;
+}
+
+
+.home nav.navbar-default {
+  margin-top: -10;
+  text-transform: uppercase;
+  font-family: 'Hanken';
+  font-size: 20px;
+  text-align: center;
+  padding:25px 0;
+  letter-spacing: 1px;
+  background: none;
+  -webkit-transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
+  -moz-transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
+}
+
+.btn-default{
+  width: 30%;
+  background-color: dodgerblue;
+  border-color:dodgerblue ;
+  color: white;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+.home .intro {
+  display: table;
+  width: 100%;
+  height: 640px;
+  color: white;
+  background: url(prokzepage1.jpeg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.assistant-signup-form{
+    width: 50%;
+    border-radius: 5px;
+  }
+
+body.home .intro .intro-body{
+  z-index: 11;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin-top:155px;
+  color: #fff6fe;
+  margin-bottom: 35px;
+  font-size:20px;
+  line-height: 1.2em;
+}
+
+.about-heading {
+  margin-top: 70px;
+  margin-bottom: 85px;
+}
+.about-heading h3 {
+  font-family: Hanken;
+  font-weight:400;
+  color: #313131;
+  font-family: inherit;
+  font-size: 50px;
+  line-height: 44px;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 43px;
+}
+.about-body p{
+  color: #aeaeae;
+  font-family: "Open Sans";
+  display: inline-block;
+  font-size:25px;
+  position: relative;
+  padding-bottom: 43px;
+}
+
+.forgot-password{
+  color: #4096ff;
+  font-family: Hanken;
+  margin-left: 40px;
+  text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  width: 27px;  height:22px;
+  color: #ffffff;
+  border: 1px solid #b6b6b6;
+  border-radius: 1px;
+}
+.style-checkbox {
+  width: 25px; height: 25px;
+  background: blue;
+  border: 1px solid #CCCCCC;
+  font-family: 'Glyphicons Halflings';
+  font-size: 22px;
+  line-height: 1;
+}
+
+.custom-check::before {
+  content: "\e013";
+  color: #424242;
+  display: none;
+}
+
+.remember-me{
+  position:absolute; bottom: 7px ; left:42px;
+  color: #737373;
+  font-family: "Calibri Light";
+  font-size: 15px;
+  text-align:center;
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+.form-control{
+  width:100%;
+}
+
+.btn-primary{
+  width: 25%;
+}
+
+.control-label .form-control{
+  width: 100%;
+}
+
+.sidebar-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar-item {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #82888a;
+  border-bottom: 1px solid #CCC;
+}
+
+.sidebar-link {
+  color: #82888a;
+  text-decoration: none;
+}
+
+.sidebar-link:hover, .sidebar-link:focus {
+  color: #cacccd;
+  text-decoration: none;
+}
+
+.active.sidebar-link {
+  color: #565a5c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+.contact-artist + .contact-artist {
+  margin-left: 2%;
+
+}
+.contact-agency {
+  text-align: center;
+  background: #999;
+  padding: 10px 5px;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: proxima-nova,sans-serif;
+  display: inline-block;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.address{
+  padding: 10px 40px;
+  text-align: center;
+  margin: 0 auto;
+  color: black;
+  border: solid 1px black;
+  font-weight: 300;
+  font-family: proxima-nova,sans-serif;
+}
+
+.pay-button-up {
+  text-align: center;
+  background: #4096ff;
+  padding: 10px 5px 15px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: proxima-nova,sans-serif;
+  display: inline-block;
+  width: 100%;
+  height: 60px;
+}
+
+
+.style_logo{
+    border: solid 2.5px #6e6e6e;
+    width: 185px;
+    display:block;
+    margin:auto;
+}
+
+.agency-name{
+  display: inline;
+  font-size: 30px;
+  font-family:  'BrownPro', Tahoma, Arial, sans-serif;
+  color: #5a5a5a;
+}
+
+.btn-default.btn {
+  width: 100%;
+  border-radius: 2px;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+input.empty {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}

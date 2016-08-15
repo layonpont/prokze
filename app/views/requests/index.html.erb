@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Care type</th>
+      <th>Location</th>
+      <th>Start time</th>
+      <th>Duration</th>
+      <th>Patient gender</th>
+      <th>Additional info</th>
+      <th>Smoker</th>
+      <th>Dogs</th>
+      <th>Cats</th>
+      <th>Iv therapy</th>
+      <th>Trach care</th>
+      <th>Nurse title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @requests.each do |request| %>
+      <tr>
+        <td><%= request.care_type %></td>
+        <td><%= request.location %></td>
+        <td><%= request.start_time %></td>
+        <td><%= request.duration %></td>
+        <td><%= request.patient_gender %></td>
+        <td><%= request.additional_info %></td>
+        <td><%= request.smoker %></td>
+        <td><%= request.dogs %></td>
+        <td><%= request.cats %></td>
+        <td><%= request.iv_therapy %></td>
+        <td><%= request.trach_care %></td>
+        <td><%= request.nurse_title %></td>
+        <td><%= link_to 'Show', request %></td>
+        <td><%= link_to 'Edit', edit_request_path(request) %></td>
+        <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Request', new_request_path %>
